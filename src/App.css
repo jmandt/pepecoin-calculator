@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  height: 80px;
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  padding: 16px;
+  background-color: #282c34;
+  color: white;
+}
+
+.App-logo {
+  height: 80%;
+  margin-right: 16px;
+}
+
+.App-link {
+  color: #269B4D; /* Base green for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.App-link:hover {
+  color: #1f8140; /* Slightly darker green for hover state */
+  text-decoration: underline;
+}
+
+button {
+  background-color: #269B4D; /* Base green for buttons */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1f8140; /* Darker green for hover state */
+}
+
+input {
+  border: 2px solid #269B4D; /* Base green for inputs */
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 300px;
+}
+
+input:focus {
+  border-color: #1f8140; /* Focus color for inputs */
+  outline: none;
+}
+
+.Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #269B4D;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links a {
+  color: #269B4D;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 40px;
+  animation: footer-logo-spin infinite 5s linear; /* Apply animation */
+}
+
+@keyframes footer-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
