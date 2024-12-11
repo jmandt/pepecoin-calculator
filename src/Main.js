@@ -112,10 +112,14 @@ const Main = () => {
       <div className="form-group">
         <label htmlFor="sharesOwned">Shares Owned:</label>
         <input
-          type="number"
+          type="text"
           id="sharesOwned"
-          value={sharesOwned}
-          onChange={handleSharesChange}
+          value={sharesOwned !== '' ? parseFloat(sharesOwned).toLocaleString('en-US') : ''}
+          onChange={(e) => {
+            // Remove commas for parsing the input value
+            const cleanedValue = e.target.value.replace(/,/g, '');
+            handleSharesChange({ target: { value: cleanedValue } });
+          }}
           placeholder="Enter shares owned"
         />
       </div>
@@ -139,10 +143,14 @@ const Main = () => {
       {activeTab === 'marketCap' && (<div className="form-group">
         <label htmlFor="marketCap">Market Cap ($):</label>
         <input
-          type="number"
+          type="text"
           id="marketCap"
-          value={marketCap || ''}
-          onChange={handleMarketCapChange}
+          value={marketCap !== null ? marketCap.toLocaleString('en-US') : ''}
+          onChange={(e) => {
+            // Remove commas from the input value for parsing
+            const cleanedValue = e.target.value.replace(/,/g, '');
+            handleMarketCapChange({ target: { value: cleanedValue } });
+          }}
           placeholder="Enter market cap"
         />
         <p>
