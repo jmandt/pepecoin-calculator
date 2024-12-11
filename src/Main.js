@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const Main = () => {
-  const totalSupply = 871400000; // Total Supply of PepeCoin
+  const totalSupply = 87212829479; // Total Supply of PepeCoin
   const [activeTab, setActiveTab] = useState('price'); // Tracks the active tab ('price' or 'marketCap')
   const [sliderPrice, setSliderPrice] = useState(0.00178); // Price per coin controlled by slider
   const [marketCap, setMarketCap] = useState(null); // Market cap input
